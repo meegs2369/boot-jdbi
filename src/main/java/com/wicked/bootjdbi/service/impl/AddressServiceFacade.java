@@ -23,10 +23,10 @@ public class AddressServiceFacade implements AddressService {
 	@Override
 	public Optional<Address> getAddress() {
 		Handle h = dbi.open();
-		return h.select("SELECT AddressLine1 FROM Address")
-				.mapTo(Address.class)
-				.findFirst();
-
+		Optional<Address> addressOption = h	.select("SELECT AddressLine1,City,PostalCode FROM Address")
+											.mapTo(Address.class)
+											.findFirst();
+		h.close();
+		return addressOption;
 	}
-
 }

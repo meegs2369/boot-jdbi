@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfig
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = JpaRepositoriesAutoConfiguration.class)
 public class Wicked {
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		SpringApplication.run(Wicked.class, args);
 	}
 }

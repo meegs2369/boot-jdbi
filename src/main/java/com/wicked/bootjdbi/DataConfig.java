@@ -22,7 +22,8 @@ public class DataConfig {
 	@Bean
 	public Jdbi dataBean() {
 		Jdbi dbi = Jdbi.create(ds);
-		dbi.registerRowMapper(Address.class, (rs, ctx) -> new Address(rs.getString("AddressLine1")));
+		dbi.registerRowMapper(Address.class, (rs, ctx) -> new Address(rs.getString("AddressLine1"),
+				rs.getString("City"), rs.getString("PostalCode")));
 		return dbi;
 	}
 
