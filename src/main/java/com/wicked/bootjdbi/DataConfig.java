@@ -3,6 +3,7 @@ package com.wicked.bootjdbi;
 import javax.sql.DataSource;
 
 import org.jdbi.v3.core.Jdbi;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,6 +14,7 @@ public class DataConfig {
 
 	private DataSource ds;
 
+	@Autowired
 	public DataConfig(DataSource ds) {
 		this.ds = ds;
 	}
