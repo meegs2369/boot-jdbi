@@ -6,7 +6,7 @@
 	<artifactId>boot-jdbi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<spring-boot.version>2.0.2.RELEASE</spring-boot.version>
+		<spring-boot.version>2.5.12.RELEASE</spring-boot.version>
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 		<java.version>1.8</java.version>
 	</properties>
